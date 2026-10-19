@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#101225">
+  <title>Aura — Feedback</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="#"><span class="mark">✦</span> AURA <span class="muted">/ FEEDBACK</span></a><span class="live"><i></i> Your voice matters</span></header>
+  <main class="layout">
+    <section class="intro">
+      <p class="eyebrow">HELP US GET BETTER</p>
+      <h1>Make your<br><span>voice count.</span></h1>
+      <p class="intro-copy">Tell us what worked, what didn’t, and what you’d love to see next. Your feedback helps shape a better experience.</p>
+      <div class="benefits"><p>✧ <span><b>Quick & easy</b><small>Takes about a minute</small></span></p><p>♡ <span><b>Every opinion counts</b><small>We appreciate your time</small></span></p></div>
+    </section>
+    <section class="card">
+      <div class="card-head"><div><p class="eyebrow">FEEDBACK FORM</p><h2>How did we do?</h2></div><span class="step">01 <span>/ 01</span></span></div>
+      <form id="feedback-form">
+        <fieldset><legend>Choose your overall experience <b>*</b></legend>
+          <div class="ratings" aria-label="Overall experience">
+            <button type="button" class="rating" data-rating="1" aria-pressed="false"><span>😞</span><small>Not great</small></button>
+            <button type="button" class="rating" data-rating="2" aria-pressed="false"><span>🙁</span><small>Could improve</small></button>
+            <button type="button" class="rating" data-rating="3" aria-pressed="false"><span>😐</span><small>It was okay</small></button>
+            <button type="button" class="rating" data-rating="4" aria-pressed="false"><span>🙂</span><small>Good</small></button>
+            <button type="button" class="rating" data-rating="5" aria-pressed="false"><span>🤩</span><small>Amazing</small></button>
+          </div><p id="rating-error" class="error" aria-live="polite"></p>
+        </fieldset>
+        <div class="field"><label for="category">What is your feedback about?</label><select id="category" name="category"><option>Overall experience</option><option>Design and appearance</option><option>Features and functionality</option><option>Performance</option><option>Accessibility</option><option>Other</option></select></div>
+        <div class="field"><label for="message">Tell us more <b>*</b></label><textarea id="message" name="message" rows="4" maxlength="1000" placeholder="Share an idea, suggestion, or something we could improve..." required></textarea><div class="meta"><span id="message-hint">Please share at least 5 characters.</span><span><span id="char-count">0</span>/1000</span></div></div>
+        <div class="field"><label for="email">Email <span class="muted">(optional)</span></label><input id="email" name="email" type="email" maxlength="254" autocomplete="email" placeholder="you@example.com"><small class="hint">Only add an email if you’d like to be contacted. Don’t include sensitive information.</small></div>
+        <label class="consent"><input id="contact-consent" type="checkbox"><span>It’s okay to contact me about this feedback.</span></label>
+        <button class="submit" type="submit"><span>Send feedback</span><span>↗</span></button>
+        <p class="privacy">🔒 Demo form: submissions are saved only in this browser.</p>
+        <p id="form-status" class="success" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+  <footer><span>© <span id="year"></span> Aura Feedback</span><span>Built to listen. Designed to improve.</span></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
